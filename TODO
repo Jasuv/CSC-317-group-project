@@ -1,0 +1,8 @@
+# Todo
+- Add Google Fonts
+  - Maybe have 2 fonts, one for headings and one for everything else
+- Add a favicon (optional)
+- pseudo-classes/pseudo-elements required (at least, 8 distinct ones!)
+- Footer required
+- Figure out how to deploy on vercel/render/netlify
+- Write the one-page pdf report
