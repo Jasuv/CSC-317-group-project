@@ -53,7 +53,7 @@ section.question {
   padding-right: 1rem;
   line-height: 1.5rem;
   position: absolute;
-  bottom: 2rem;
+  bottom: 3.5rem;
   right: 0rem;
   margin: 0;
   max-width: 70%;
@@ -64,6 +64,49 @@ section.question {
   box-sizing: border-box;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+
+#question-1 {
+  background-image: url("images/dryland.jpg");
+}
+#question-2 {
+  background-image: url("images/factory_2.jpg");
+}
+#question-3 {
+  background-image: url("images/farmland.jpg");
+}
+#question-4 {
+  background-image: url("images/low_income.jpg");
+}
+#question-5 {
+  background-image: url("images/melting_ice_1.jpg");
+}
+#question-6 {
+  background-image: url("images/melting_ice_2.jpg");
+}
+#question-7 {
+  background-image: url("images/melting_ice_3.jpg");
+}
+#question-8 {
+  background-image: url("images/dryland.jpg");
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  /* width: 100vw; */
+  z-index: 10;
+  /* background-color: black; */
+  /* padding: 0.1rem; */
+  padding-right: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #fff;
+}
+.footer a {
+  color: #fff;
+  /* text-decoration: none; */
 }
 
 /* keeping elements within the view  port */
