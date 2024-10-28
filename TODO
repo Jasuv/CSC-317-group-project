@@ -1,8 +1,11 @@
 # Todo
-- Add Google Fonts
-  - Maybe have 2 fonts, one for headings and one for everything else
+- Add Google Fonts (Maybe have 2 fonts, one for headings and one for everything else)
 - Add a favicon (optional)
 - pseudo-classes/pseudo-elements required (at least, 8 distinct ones!)
-- Footer required
 - Figure out how to deploy on vercel/render/netlify
 - Write the one-page pdf report
+- Fix fact #7 (its the same as #6)
+- Fix Media Queries
+- Reorganize bg pictures to fit facts
+- Maybe choose diff "low-income" image (kinda harsh on the eyes)
+- UI touch up (Fact# isnt very appealing)
