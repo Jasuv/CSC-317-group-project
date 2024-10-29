@@ -2,29 +2,50 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
 }
 
-/* hide the scoll bars */
+:root {
+    --see-through-black: rgba(0, 0, 0, 0.8); 
+    --light-black: #3f3f3f; 
+    line-height: 3.5rem;
+}
+
+/* fonts */
+h1, h2, a, p {
+    font-family: 'Roboto Mono';
+}
+.answer {
+    font-family: 'Montserrat';
+    word-spacing: 0.7rem;
+}
+
+/* hide the scroll bars */
 html::-webkit-scrollbar,
 .smooth::-webkit-scrollbar {
     display: none;
 }
 
+/* prevent seeing footer white space */
+.enclose {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
 /* nav bar */
 nav.menu {
     position: fixed;
-    z-index: 10;
+    width: 100%;
     background-color: black;
     opacity: 75%;
-    width: 100%;
+    z-index: 10;
 }
 nav.menu ul {
-    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
 }
 nav.menu li {
     padding: 0 100px;
@@ -38,10 +59,19 @@ nav.menu a { /* buttons */
     text-decoration: none; 
     padding: 0 20px;
     font-size: x-large;
-    color: white; 
+    background-color: black;
 }
 nav.menu a:hover {
     text-decoration: underline;
+}
+nav.menu a:link {
+    color: white;
+}
+nav.menu a:visited {
+    color: rgba(100, 100, 100);
+}
+nav.menu a:active {
+    font-weight: bold;
 }
 
 /* Q&A */
@@ -49,66 +79,78 @@ nav.menu a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 3;
     scroll-behavior: smooth;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    z-index: 3;
 }
-section.question {
+.question {
     position: relative;
-    display: flex;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+    display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    background-size: cover;
     scroll-snap-align: center;
-    background-image: url('images/Panel.png');
+}
+.question:nth-child(even) h2 {
+    background-color: black;
+    color: white;
+}
+.question:nth-child(even) .answer {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--light-black);
 }
 .question h2 {
-    font-size: 2rem;
-    padding: 1rem;
-    padding-left: 1rem;
-    line-height: 1.5rem;
-
     position: absolute;
-    top: 20%;
-    left: 10rem;
-    color: #333;
-    box-sizing: border-box;
-    word-break: break-word;
+    top: 30%;
+    margin: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: var(--light-black);
     background: white;
     border-radius: 1rem;
 }
 .question .answer {
-    font-size: 2rem;
-    padding: 1rem;
-    padding-right: 1rem;
-    line-height: 3.5rem;
-    word-spacing: 0.3rem;
     position: absolute;
-    top: 20rem;
+    top: 40%;
     margin: 0;
-    max-width: 70%;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.8);
-    color: #eee;
-    box-sizing: border-box;
-    border-radius: 15px;
+    padding: 1rem;
+    font-size: 2rem;
+    max-width: 80%;
+    color: white;
+    background: var(--see-through-black);
+    border-radius: 1rem;
+}
+.question h2 span {
+    font-style: italic;
+}
+.question span:is(:not(h2 span)) {
+    font-weight: bold;
+}
+sub { /* prevents subscript from messing with the line height */
+  line-height: 0; 
 }
 
 /* footer */
 .footer {
     position: absolute;
     bottom: -100px;
-    width: 100vw;
-    z-index: 10;
-    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
     color: white;
-    padding: 0.2rem;
-    text-align: center;
+    background-color: black;
     transition: bottom 0.5s ease;
+    z-index: 10;
+}
+.footer a {
+    color: white;
 }
 .footer.show {
     bottom: 0;
@@ -117,9 +159,52 @@ section.question {
 /* background */
 .background {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url('images/dryland.jpg');
     transition: background-image 0.5s ease;
     z-index: -1;
+}
+
+/* mobile media query */
+@media (max-width: 600px) {
+    html, body {
+        line-height: 2rem;
+    }
+
+    /* nav bar */
+    nav.menu ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav.menu h1 {
+        font-size: large;
+    }
+    nav.menu a {
+        font-size: medium;
+        word-spacing: 0.5rem;
+    }
+
+    /* Q&A */
+    .question h2 {
+        font-size: 1.5rem;
+        top: 20%;
+    }
+    .question .answer {
+        font-size: 1.3rem;
+        top: 35%;
+        max-width: 80%;
+    }
+
+    /* footer */
+    .footer {
+        padding: 0.5rem;
+        font-size: x-small;
+    }
+
+    /* background */
+    .background {
+        background-size: cover;
+        background-position: right;
+    }
 }
