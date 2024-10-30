@@ -19,11 +19,7 @@ h1, h2, a, p {
     word-spacing: 0.7rem;
 }
 
-/* hide the scroll bars */
-html::-webkit-scrollbar,
-.smooth::-webkit-scrollbar {
-    display: none;
-}
+
 
 /* prevent seeing footer white space */
 .enclose {
@@ -68,7 +64,11 @@ nav.menu a:link {
     color: white;
 }
 nav.menu a:visited {
-    color: rgba(100, 100, 100);
+    /* 
+        disabled this because I don't want visited links to be different 
+        --Bilal */
+    /* color: rgba(100, 100, 100); */
+    color: white;
 }
 nav.menu a:active {
     font-weight: bold;
