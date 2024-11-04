@@ -103,6 +103,7 @@ section.question {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   color: #fff;
+  font-size: 0.75rem;
 }
 .footer a {
   color: #fff;
@@ -179,6 +180,9 @@ nav.menu ul li a:hover {
     padding-right: 1.5rem;
     font-size: 1.5rem;
   }
+  footer {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1068px) {
@@ -204,6 +208,9 @@ nav.menu ul li a:hover {
     padding-right: 2rem;
     font-size: 2rem;
   }
+  footer {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -228,5 +235,8 @@ nav.menu ul li a:hover {
   nav.menu h3 {
     padding-right: 3rem;
     font-size: 3rem;
+  }
+  footer {
+    font-size: 1rem;
   }
 }
