@@ -181,7 +181,7 @@ nav.menu ul li a:hover {
     font-size: 1.25rem;
   }
   footer {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 
@@ -209,7 +209,7 @@ nav.menu ul li a:hover {
     font-size: 1.75rem;
   }
   footer {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 
@@ -237,6 +237,6 @@ nav.menu ul li a:hover {
     font-size: 3rem;
   }
   footer {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
