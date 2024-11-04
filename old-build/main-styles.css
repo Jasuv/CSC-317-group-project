@@ -67,28 +67,28 @@ section.question {
 }
 
 #question-1 {
-  background-image: url("images/dryland.jpg");
+  background-image: url("../images/dryland.jpg");
 }
 #question-2 {
-  background-image: url("images/factory_2.jpg");
+  background-image: url("../images/factory_2.jpg");
 }
 #question-3 {
-  background-image: url("images/farmland.jpg");
+  background-image: url("../images/farmland.jpg");
 }
 #question-4 {
-  background-image: url("images/low_income.jpg");
+  background-image: url("../images/low_income.jpg");
 }
 #question-5 {
-  background-image: url("images/melting_ice_1.jpg");
+  background-image: url("../images/melting_ice_1.jpg");
 }
 #question-6 {
-  background-image: url("images/melting_ice_2.jpg");
+  background-image: url("../images/melting_ice_2.jpg");
 }
 #question-7 {
-  background-image: url("images/melting_ice_3.jpg");
+  background-image: url("../images/melting_ice_3.jpg");
 }
 #question-8 {
-  background-image: url("images/dryland.jpg");
+  background-image: url("../images/dryland.jpg");
 }
 
 .footer {
